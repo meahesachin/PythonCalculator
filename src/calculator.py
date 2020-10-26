@@ -18,6 +18,11 @@ def division(a, b):
     return c
 
 
+def squared(a):
+    c = a*a
+    return c
+
+
 class Calculator:
     result = 0
 
@@ -38,6 +43,10 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def square(self, a):
+        self.result = squared(a)
         return self.result
 
 
