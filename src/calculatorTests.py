@@ -30,8 +30,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.divide(6, 3), 2)
 
     def test_square(self):
-        calcultor = Calculator()
-        self.assertEqual(calcultor.square(2), 4)
+        calculator = Calculator()
+        self.assertEqual(calculator.square(2), 4)
+
+    def test_sqrt(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.sqrt(4), 2)
 
 
 if __name__ == '__main__':
