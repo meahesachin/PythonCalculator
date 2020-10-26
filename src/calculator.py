@@ -50,6 +50,8 @@ class Calculator:
         return self.result
 
     def divide(self, a, b):
+        if b < 1:
+            return 0
         self.result = division(a, b)
         return self.result
 

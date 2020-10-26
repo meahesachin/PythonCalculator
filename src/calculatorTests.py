@@ -29,6 +29,10 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator()
         self.assertEqual(calculator.divide(6, 3), 2)
 
+    def test_dividebyzero(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.divide(6, 0), 0)
+
     def test_square(self):
         calculator = Calculator()
         self.assertEqual(calculator.square(2), 4)
