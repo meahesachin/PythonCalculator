@@ -2,33 +2,33 @@ import math
 
 
 def addition(a, b):
-    c = a + b
-    return c
+    c = float(a) + float(b)
+    return float(c)
 
 
 def subtraction(a, b):
-    c = a-b
-    return c
+    c = float(a)-float(b)
+    return float(c)
 
 
 def multiplication(a, b):
-    c = a*b
-    return c
+    c = float(a)*float(b)
+    return float(c)
 
 
 def division(a, b):
-    c = a/b
-    return c
+    c = float(a)/float(b)
+    return float(c)
 
 
 def squared(a):
-    c = a ** 2
+    c = float(a) ** 2
     return c
 
 
 def squareroot(a):
     c = math.sqrt(a)
-    return c
+    return float(c)
 
 
 class Calculator:
@@ -50,18 +50,18 @@ class Calculator:
         return self.result
 
     def divide(self, a, b):
-        if b < 1:
+        if float(b) < 1:
             return 0
         self.result = division(a, b)
-        return self.result
+        return format(self.result, '.9f')
 
     def square(self, a):
         self.result = squared(a)
         return self.result
 
     def sqrt(self, a):
-        self.result = squareroot(a)
-        return self.result
+        self.result = squareroot(int(a))
+        return format(self.result, '.8f')
 
 
 
