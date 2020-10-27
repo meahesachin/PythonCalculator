@@ -50,7 +50,7 @@ class Calculator:
         return self.result
 
     def divide(self, a, b):
-        if float(b) < 1:
+        if float(b) == 0:
             return 0
         self.result = division(a, b)
         return format(self.result, '.9f')
@@ -61,10 +61,11 @@ class Calculator:
 
     def sqrt(self, a):
         self.result = squareroot(int(a))
+        fmt = ""
         if self.result.is_integer():
-            return format(self.result, '.1f')
+            fmt = ".1f"
         else:
-            return format(self.result, '.8f')
-
+            fmt = ".8f"
+        return format(self.result, fmt)
 
 
