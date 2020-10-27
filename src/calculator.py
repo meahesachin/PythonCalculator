@@ -61,7 +61,10 @@ class Calculator:
 
     def sqrt(self, a):
         self.result = squareroot(int(a))
-        return format(self.result, '.8f')
+        if self.result.is_integer():
+            return format(self.result, '.1f')
+        else:
+            return format(self.result, '.8f')
 
 
 
